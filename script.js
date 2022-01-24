@@ -13,8 +13,10 @@ var generatePassword = function() {
       window.alert("You must choose a password between 8 and 128 characters.");
     }
     else {
+        var randomcharacter = "";
         for(var i = 0; i <= characters.length; i++) {
-            var randomcharacter = Math.floor(Math.random() * (8,128)+1);
+            var randomeCharacterInteger = Math.floor(Math.random() * (0,characters.length)+1);
+            randomcharacter += characters.charAt(randomeCharacterInteger);
         }
         return randomcharacter;
     }
